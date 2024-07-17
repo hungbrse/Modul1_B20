@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide and Show Text</title>
+  </head>
+  <body>
+    <p id="text">THis is Text THis is Text</p>
+    <button class="btn-Hide">Hide Text</button>
+    <button class="btn-Show">Show Text</button>
+
+    <script>
+      let txt = document.getElementById("text");
+
+      let btnHide = document.getElementsByClassName("btn-Hide")[0];
+      let btnShow = document.getElementsByClassName("btn-Show")[0];
+
+      btnHide.addEventListener("click", function () {
+        txt.style.display = "none";
+      });
+
+      btnShow.addEventListener("click", function () {
+        txt.style.display = "block";
+      });
+    </script>
+  </body>
+</html>

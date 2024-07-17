@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove HTMLElement Example</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="box1" class="box">Box 1</div>
+      <div id="box2" class="box">Box 2</div>
+      <div id="box3" class="box">Box 3</div>
+    </div>
+
+    <script>
+      // Lấy ra phần tử cần xóa
+      var boxToRemove = document.getElementById("box2");
+      var boxToRemove3 = document.getElementById("box3");
+
+      // Xóa phần tử này bằng cách gọi phương thức remove()
+      boxToRemove.remove();
+      boxToRemove3.remove();
+    </script>
+  </body>
+</html>

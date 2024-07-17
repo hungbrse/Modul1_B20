@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>querySelectorAll Example</title>
+  </head>
+  <body>
+    <div class="container">
+      <p class="text">First Paragraph in the first container</p>
+      <p class="text">Second Paragraph in the first container</p>
+    </div>
+    <div class="container">
+      <p class="text">First Paragraph in the second container</p>
+      <p class="text">Second Paragraph in the second container</p>
+    </div>
+    <button onclick="changeAllTexts()">Change All Texts</button>
+
+    <script>
+      function changeAllTexts() {
+        // Lấy tất cả các phần tử <p> có class là 'text'
+        var allTexts = document.querySelectorAll(".container .text");
+        // Thay đổi nội dung của từng phần tử <p>
+        allTexts.forEach(function (paragraph) {
+          paragraph.textContent = "This paragraph has been changed.";
+        });
+      }
+    </script>
+  </body>
+</html>

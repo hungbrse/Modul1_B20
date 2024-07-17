@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <script>
+      const container = document.getElementById("list");
+      for (let i = 0; i < 3; i++) {
+        container.insertAdjacentHTML("beforeBegin", `<li>${i}</li>`);
+        container.insertAdjacentHTML("afterbegin", `<li>${i}</li>`);
+        container.insertAdjacentHTML("beforeend", `<li>${i}</li>`);
+        container.insertAdjacentHTML("afterend", `<li>${i}</li>`);
+      }
+    </script>
+  </body>
+</html>

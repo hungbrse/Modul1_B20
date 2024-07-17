@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box-container {
+        width: 30%;
+        border: 1px solid black;
+      }
+
+      .box1 {
+        width: 150px;
+        height: 150px;
+        background-color: aqua;
+      }
+
+      .box2 {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(97, 15, 168);
+      }
+
+      .box3 {
+        width: 150px;
+        height: 150px;
+        background-color: rgba(244, 113, 12, 0.818);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-container">
+      <h1>Thay Đổi Màu</h1>
+      <p>dí chuột</p>
+
+      <div style="display: flex">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+      </div>
+    </div>
+
+    <script>
+      let boxContainer = document.querySelector(".box-container");
+      let b1 = document.querySelector(".box1");
+      let b2 = document.querySelector(".box2");
+      let b3 = document.querySelector(".box3");
+
+      b1.addEventListener("mouseenter", function () {
+        boxContainer.style.backgroundColor = "aqua";
+      });
+
+      b2.addEventListener("mouseenter", function () {
+        boxContainer.style.backgroundColor = " rgb(97, 15, 168)";
+      });
+
+      b3.addEventListener("mouseenter", function () {
+        boxContainer.style.backgroundColor = " rgba(244, 113, 12, 0.818)";
+      });
+
+      boxContainer.addEventListener("mouseleave", function () {
+        boxContainer.style.backgroundColor = "white";
+      });
+    </script>
+  </body>
+</html>

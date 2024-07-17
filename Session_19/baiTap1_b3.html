@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //var không có phạm vi khối (block scope),
+      //có nghĩa là nếu nó được khai báo trong một khối như if hay for, nó vẫn có thể được truy cập ngoài khối đó.
+      // biến var có thể hosting tức là bạn có thể sử dụng biến trước khi khai báo mà không hiện lỗi nhưng kết quả trả
+      // về chính là undifine kk
+
+      // let có phạm vi hoạt động trong khối block tức là nếu bạn sử dụng bên ngoài khối block sẽ gây ra lỗi
+      // Biến khai báo bằng let cũng được "hoisted" nhưng không được khởi tạo. Điều này có nghĩa là bạn không thể
+      // sử dụng biến trước khi khai báo. Nếu cố gắng làm như vậy sẽ gây ra lỗi ReferenceError.
+    </script>
+  </body>
+</html>

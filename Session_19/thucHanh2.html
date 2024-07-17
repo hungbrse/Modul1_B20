@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Your abcxyz</h1>
+    <input class="inputTxt" type="text" placeholder="New item" />
+    <button class="btn" value="">add</button>
+    <ul class="list"></ul>
+
+    <script>
+      let items = ["Backpack", "MiBand watch", "Ring"];
+
+      console.log(items);
+
+      const ulElement = document.querySelector(".list");
+
+      for (const i in items) {
+        console.log(`index thứ ${i} và giá trị ${items[i]}`);
+
+        const liElement = document.createElement("li");
+
+        liElement.textContent = items[i];
+
+        const removeBtn = document.createElement("button");
+
+        removeBtn.textContent = "X";
+
+        removeBtn.addEventListener("click", function () {
+          liElement.remove();
+        });
+        ulElement.appendChild(liElement);
+        liElement.appendChild(removeBtn);
+      }
+
+      let inputTxt = document.getElementsByClassName("inputTxt")[0];
+
+      let btn = document.getElementsByClassName("btn")[0];
+
+      btn.addEventListener("click", function () {
+        const newItem = inputTxt.value;
+
+        if (newItem) {
+          items.push(newItem);
+          console.log(items);
+
+          const liElement = document.createElement("li");
+
+          liElement.textContent = newItem;
+
+          ulElement.appendChild(liElement);
+
+          const removeBtn = document.createElement("button");
+          removeBtn.textContent = "X";
+
+          liElement.appendChild(removeBtn);
+
+          removeBtn.addEventListener("click", function () {
+            liElement.remove();
+          });
+          inputTxt.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

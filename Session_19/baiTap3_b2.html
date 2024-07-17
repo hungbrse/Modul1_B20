@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .modal-class {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 0;
+        left: 0;
+      }
+
+      .modal-content {
+        background-color: aliceblue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* transform: translate(-50%, -50%); */
+        padding: 20px;
+      }
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Modal Example</h1>
+    <button class="btn">Open Modal</button>
+
+    <div class="modal-class">
+      <div class="modal-content">
+        <span class="close">X</span>
+        <p>Hãy viết nên những câu truyện buồn</p>
+      </div>
+    </div>
+
+    <script>
+      const btn = document.querySelector(".btn");
+      const modal = document.getElementsByClassName("modal-class")[0];
+      const close = document.querySelector(".close");
+
+      btn.addEventListener("click", function () {
+        modal.style.display = "block";
+      });
+
+      close.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

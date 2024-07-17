@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .hover_class {
+        border-bottom: 1px black dashed;
+        width: 100px;
+        position: relative; /* Để Tooltip hiển thị đúng vị trí */
+      }
+
+      .tooltip {
+        display: none;
+        position: absolute;
+        background-color: #f0f0f0;
+        padding: 5px;
+        z-index: 1;
+        bottom: 100%; /* Hiển thị phía trên dòng text */
+        left: 0;
+        width: 120px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tooltip Example</h1>
+    <p>Move your mouse over the text below:</p>
+
+    <p class="hover_class">Hover over me</p>
+
+    <script>
+      // Lấy phần tử p có class hover_class
+      let p = document.querySelector(".hover_class");
+
+      // Tạo một element span cho Tooltip
+      let tooltip = document.createElement("span");
+      tooltip.className = "tooltip";
+      tooltip.textContent = "Xuất hiện text";
+
+      // Thêm Tooltip vào p
+      p.appendChild(tooltip);
+
+      // Bắt sự kiện mouseenter và mouseleave để hiển thị và ẩn Tooltip
+      p.addEventListener("mouseenter", function () {
+        tooltip.style.display = "block";
+      });
+
+      p.addEventListener("mouseleave", function () {
+        tooltip.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

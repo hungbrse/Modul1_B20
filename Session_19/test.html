@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classList Example</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="myParagraph">Hello, world!</p>
+    <button id="toggleButton">Toggle Color</button>
+
+    <script>
+      // Lấy phần tử
+      const paragraph = document.getElementById("myParagraph");
+      const button = document.getElementById("toggleButton");
+
+      // Thêm lớp 'red' vào phần tử
+      paragraph.classList.add("red");
+
+      // Thêm sự kiện click cho nút
+      button.addEventListener("click", () => {
+        // Chuyển đổi giữa lớp 'red' và 'blue'
+        paragraph.classList.toggle("red");
+        paragraph.classList.toggle("blue");
+      });
+    </script>
+  </body>
+</html>

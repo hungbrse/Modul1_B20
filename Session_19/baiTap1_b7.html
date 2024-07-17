@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener Example</title>
+  </head>
+  <body>
+    <button id="btn">Click me</button>
+
+    <button id="btn1">Btn1</button>
+
+    <button id="btn2">Btn2</button>
+
+    <script>
+      // Lấy ra button có id là 'btn'
+      var btn = document.getElementById("btn");
+
+      // Gắn sự kiện 'click' cho button và định nghĩa callback function
+      btn.addEventListener("click", (e) => {
+        // Truy cập thông tin về sự kiện thông qua tham số 'e'
+        console.log("Thông tin về sự kiện:", e);
+
+        // Ví dụ: In ra loại sự kiện (event type)
+        console.log("Loại sự kiện:", e.type);
+
+        // Ví dụ: In ra phần tử mà sự kiện đã xảy ra trên đó (event target)
+        console.log("Phần tử gọi sự kiện:", e.target);
+
+        // Ví dụ: Ngăn chặn hành động mặc định của sự kiện (nếu cần)
+        e.preventDefault();
+      });
+
+      let btn1 = document.getElementById("btn1");
+      let btn2 = document.getElementById("btn2");
+
+      btn1.addEventListener("click", (e) => {
+        // Ví dụ: In ra phần tử mà sự kiện đã xảy ra trên đó (event target)
+        // in ra cách khai báo của button.
+        console.log("Phần tử gọi sự kiện:", e.target);
+      });
+
+      btn2.addEventListener("keydown", (e) => {
+        // sẽ in ra nút bàn phím mà chúng ta đã ấn hêhe
+        console.log("Phần tử gọi sự kiện:", e.key);
+      });
+    </script>
+  </body>
+</html>

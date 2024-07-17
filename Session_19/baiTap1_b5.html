@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+
+
+  <body>
+
+
+    <div>
+        <div class="singer">James Bay</div>
+        <div class="singer">Nate Ruess</div>
+        <div class="singer">Ed Sheeran</div>
+        <div class="singer">Steve Garrigan</div>
+      <div>
+    <script>
+
+        let getClass = document.getElementsByClassName("singer");
+
+
+        console.log(getClass[0].textContent)
+
+
+        for (const key of getClass) {
+         console.log(`${key.textContent}`)
+        }
+
+    </script>
+  </body>
+</html>

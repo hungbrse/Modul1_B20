@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+  </head>
+  <body>
+    <div id="timer">10</div>
+
+    <script>
+      let count = 0;
+      let intervalId = setInterval(function () {
+        count++;
+        console.log("Đếm đếm");
+
+        if (count === 4) {
+          clearInterval(intervalId); // Dừng interval khi count đạt 4
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
